@@ -1,0 +1,20 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ]
+        }
+      }
+    ],
+    "@babel/react"
+  ],
+  "plugins": [
+    ["import", { "libraryName": "antd", "style": "css" }]
+  ]
+}
