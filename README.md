@@ -15,14 +15,14 @@ yarn dev    # start dev server
 
 #### yarn dev
 
- Start the app in dev mode  
+ Start the app in dev mode.
 
 #### yarn build
 
- Build the app in production mode  
+ Build the app in production mode.
 
 #### yarn lint
 
- Check all `ts,tsx` files whether they match given coding style          
+ Check all `ts,tsx` files whether they match given coding style.
 
 ### Have FUN !
