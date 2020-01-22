@@ -6,7 +6,9 @@
     "scripts": {
         "dev": "parcel public/index.html",
         "build": "parcel build public/index.html",
-        "lint": "eslint --ext .ts,.tsx src/"
+        "lint": "eslint --ext .ts,.tsx src/",
+        "commit": "git-cz",
+        "release": "standard-version"
     },
     "author": "Ugur Coskun<ugurcoskun232@gmail.com>",
     "license": "MIT",
@@ -22,6 +24,8 @@
         "@babel/plugin-proposal-class-properties": "^7.7.0",
         "@babel/preset-env": "^7.7.1",
         "@babel/preset-react": "^7.7.0",
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
         "@types/jest": "^24.0.23",
         "@types/node": "^12.12.9",
         "@types/react": "^16.9.11",
@@ -32,12 +36,34 @@
         "babel-plugin-import": "^1.12.2",
         "babel-plugin-transform-class-properties": "^6.24.1",
         "babel-preset-es2015": "^6.24.1",
+        "commitizen": "^4.0.3",
+        "cz-conventional-changelog": "^3.0.2",
         "eslint": "^6.6.0",
         "eslint-config-prettier": "^6.7.0",
         "eslint-plugin-prettier": "^3.1.1",
         "eslint-plugin-react": "^7.16.0",
+        "husky": "^4.0.10",
+        "lint-staged": "^10.0.1",
         "parcel-bundler": "^1.12.4",
         "prettier": "^1.19.1",
+        "standard-version": "^7.0.1",
         "typescript": "^3.7.4"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "git add"
+        ]
     }
 }
