@@ -46,7 +46,7 @@
         "lint-staged": "^10.0.1",
         "parcel-bundler": "^1.12.4",
         "prettier": "^1.19.1",
-        "standard-version": "^7.0.1",
+        "standard-version": "^8.0.1",
         "typescript": "^3.7.4"
     },
     "husky": {
